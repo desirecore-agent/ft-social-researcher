@@ -1,0 +1,35 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "社交媒体研究专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "LinkedIn优先的企业/联系人研究与证据初筛。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "社交",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "ft-social-prospecting"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-social-researcher.git",
+    "branch": "main"
+  }
+}
